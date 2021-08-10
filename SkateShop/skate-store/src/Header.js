@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.css';
 import swbshop from './swbshop.JPG';
 import SearchIcon from "@material-ui/icons/Search";
+import { ShoppingBasket } from '@material-ui/icons';
 
 function Header() {
     return (
@@ -36,6 +37,11 @@ function Header() {
                         <span className="header_optionLineOne">your</span>
                         <span className="header_optionLineTwo">SWB Bag</span>
                     </div>
+                </div>
+
+                <div className="header_optionBasket">
+                    <ShoppingBasket />
+                    <span className="header_optionLineTwo header_basketCount">0</span>
                 </div>
         </div>
         
