@@ -3,15 +3,19 @@ import './Header.css';
 import swbshop from './swbshop.JPG';
 import SearchIcon from "@material-ui/icons/Search";
 import { ShoppingBasket } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
+
 
 function Header() {
     return (
         <div className="header">
+            <Link to="/">
+                <img 
+                    src={swbshop}
+                    alt="SKate shop logo" 
+                     className="header_logo" />
+            </Link>
             
-            <img 
-                 src={swbshop}
-                 alt="SKate shop logo" 
-                 className="header_logo" />
 
             <div className="header_search">
 
@@ -39,10 +43,13 @@ function Header() {
                     </div>
                 </div>
 
+            <Link to="/checkout">
                 <div className="header_optionBasket">
                     <ShoppingBasket />
                     <span className="header_optionLineTwo header_basketCount">0</span>
                 </div>
+            </Link>
+               
         </div>
         
     )
